@@ -9,7 +9,7 @@
     <a href="/posts">Posts</a>
 </nav>
 <body>
-    <h1>Make a Post</h1>
+    <h1>Here</h1>
     <div>
         <form action="/store" method="POST">
         <div>

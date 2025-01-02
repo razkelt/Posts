@@ -10,6 +10,7 @@ function routetoController() {
         '/store' => 'controllers/store.php',
         '/delete' => 'controllers/delete.php',
         '/edit' => 'controllers/edit.php',
+        '/login' => 'controllers/login.php'
         
     ];
     

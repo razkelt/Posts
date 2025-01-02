@@ -1,5 +1,12 @@
 <?php
 
+
+
+if (!isset($_SESSION)) {  
+    view('login.view.php');
+    die();
+}
+
 require base_path('Database.php');
 
 $db = new Database();
