@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="/login" method="POST">
-        <input name="key">
+        <input name="username" type="password">
         <input name="password" type="password">
         <button type="submit">submit</button>
     </form>

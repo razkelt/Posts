@@ -1,7 +1,6 @@
 <?php
 
 
-
 if (!isset($_SESSION)) {  
     view('login.view.php');
     die();
