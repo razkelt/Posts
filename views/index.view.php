@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<nav>
-    <a href="/posts">Posts</a>
-</nav>
+
 <body>
+    <a href="/posts">Posts</a>
     <h1>Here</h1>
     <div>
         <form action="/store" method="POST">

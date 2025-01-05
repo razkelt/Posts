@@ -1,8 +1,9 @@
 <?php
 
-
-if (!isset($_SESSION)) {  
-    view('login.view.php');
+  
+if (!isset($_SESSION['name'])) {
+    
+    require base_path('controllers/login.php');
     die();
 }
 

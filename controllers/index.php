@@ -1,6 +1,5 @@
 <?php
 
-vd(!isset($_SESSION));
 
 
 require base_path('Database.php');
