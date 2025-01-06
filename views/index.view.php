@@ -7,8 +7,8 @@
 </head>
 
 <body>
-    <a href="/posts">Posts</a>
-    <h1>Here</h1>
+    <a href="/posts">Posts</a>      &nbsp; <a href="/logout">Logout</a>
+    <h1>Write here.</h1>
     <div>
         <form action="/store" method="POST">
         <div>
