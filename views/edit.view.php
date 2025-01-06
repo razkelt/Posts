@@ -14,11 +14,20 @@
         <form action="/edit?id=<?=$id?>" method="POST">
             <input type="hidden" name="_method" value="PATCH">
         <div>
-            <input name="title" id="title" value=<?= 
+        <textarea name="title" id="title" value=<?= 
         
         ($post['title']) ?? '' 
         
-        ?>>
+        ?>></textarea>
+        
+        </div>
+        <div>
+        <textarea name="body" id="body"><?= 
+        
+        ($post['title']) ?? '' 
+        
+        ?></textarea>
+        </div>
         </div>
         <div>
         <textarea name="body" id="body"><?= 
