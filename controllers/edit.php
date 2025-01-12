@@ -9,7 +9,7 @@ $id = $_REQUEST['id'];
 
 
 $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
-vd($method);
+
 if ($method == 'POST') {
     $post = $db->query('select * from posts where id = :id', ['id' => $id])->fetch(PDO::FETCH_ASSOC);
     

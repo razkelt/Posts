@@ -4,7 +4,7 @@ require base_path('Database.php');
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+    echo("Data Posted");
     $db=new Database();
     $username = $_POST['username'];
 
@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $posts = $db->query('select * from posts')->fetchAll(PDO::FETCH_ASSOC);
         
     if (password_verify($_POST['password'], $user['password'])) {
-;
-        session_regenerate_id(true);
+        echo("Verifying Passowrd");
+        
         $_SESSION['name'] = 'mohit';
 
         header("location: /posts");
