@@ -14,15 +14,7 @@
         <form action="/edit?id=<?=$id?>" method="POST">
             <input type="hidden" name="_method" value="PATCH">
         <div>
-        <textarea name="title" id="title" value=<?= 
-        
-        ($post['title']) ?? '' 
-        
-        ?>></textarea>
-        
-        </div>
-        <div>
-        <textarea name="body" id="body"><?= 
+        <textarea name="title" id="title"><?= 
         
         ($post['title']) ?? '' 
         

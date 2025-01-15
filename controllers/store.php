@@ -4,17 +4,23 @@ require base_path('Database.php');
 
 $db = new Database();
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && !isset($method)) {
-    $body= $_REQUEST['post'];
-    $title= $_REQUEST['title'];
-    
-    
-    $posts = $db->query('INSERT INTO `posts` (`title`, `body`) VALUES (:title, :body)', 
-    [':title' => $title,
-    ':body' => $body]);
 
-    header('location: /posts');
+$body= $_REQUEST['body'];
+$title= $_REQUEST['title'];
+$folder=$_REQUEST['folder'];
+
+
+
+if (str_contains($body, 'buhbye')) {
+    $posts = $db->query('INSERT INTO `posts` (`title`, `body`, `folder`) VALUES (:title, :body, :folder)', 
+    [':title' => $title,
+    ':body' => $body,
+    ':folder' => $folder]);
+
+    header('location: /');
     die();
+
 }
 
+header('location: /');
 

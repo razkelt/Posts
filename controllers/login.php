@@ -3,8 +3,9 @@
 require base_path('Database.php');
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo("Data Posted");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && !isset($_POST['body'])) {
+    vd("Data Posted");
     $db=new Database();
     $username = $_POST['username'];
 
@@ -23,4 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 
 }
-view ('login.view.php');
+
+
+view ('login.view.php', );

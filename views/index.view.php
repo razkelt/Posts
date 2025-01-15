@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <a href="/posts">Posts</a>      &nbsp; <a href="/logout">Logout</a>
+    <a href="/posts">Posts</a>      &nbsp; <a href="/logout">Logout</a>  &nbsp; <a href="/login">Login</a>
     <h1>Write here.</h1>
     <div>
         <form action="/store" method="POST">
@@ -19,12 +19,16 @@
         ?>>
         </div>
         <div>
-        <textarea name="post" id="post"><?= 
+        <textarea name="body" id="body"><?= 
         
         ($post['body']) ?? '' 
         
         ?></textarea>
-        <button for="post">Submit</button>
+        <select name="folder">
+            <option selected="selected">Post</option>
+            <option>Note</option>
+        </select>
+        <button>Submit</button>
         </div>
         </form>
     </div>

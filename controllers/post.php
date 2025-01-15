@@ -8,19 +8,18 @@ require base_path('Database.php');
 
 $db = new Database();
 $id = $_REQUEST['id'];
-$post = $db->query('select * from posts where id = :id', ['id' => $id])->fetch(PDO::FETCH_ASSOC);
+
+if (!isset($_SESSION['name'])) {
+$post = $db->query("select * from posts where id = :id and folder='Post'", ['id' => $id])->fetch(PDO::FETCH_ASSOC);
+view ('post.view.php', [
+    'post' => $post 
+]);
+    die();
+}
 
 
 
-
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     $db->query('delete from posts where id = :id', ['id' => $id]);
-//     header('location: /posts');
-//     die();
-
-// }
-
-
+$post = $db->query("select * from posts where id = :id", ['id' => $id])->fetch(PDO::FETCH_ASSOC);
 view ('post.view.php', [
     'post' => $post
 ]);

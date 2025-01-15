@@ -18,6 +18,8 @@ if ($method == 'POST') {
         'id' => $id
     ]); 
 
+    die();
+
 }
 
 elseif ($method == 'PATCH') {

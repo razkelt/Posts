@@ -2,7 +2,7 @@
 
 
 
-function routetoController() {
+/* function routetoController() {
     $routes = [
         '/' => 'controllers/index.php',
         '/posts' => 'controllers/posts.php',
@@ -25,7 +25,7 @@ function routetoController() {
     else {
         require 'error.php';
     }
-}
+} */
 
 function base_path($path) {
     return BASE_PATH.$path;
